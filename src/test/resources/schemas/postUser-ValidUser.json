@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "name": "morpheus",
+      "job": "leader",
+      "id": "720",
+      "createdAt": "2020-11-03T18:12:32.587Z"
+    }
+  ],
+  "required": [
+    "name",
+    "job",
+    "id",
+    "createdAt"
+  ],
+  "properties": {
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "User name",
+      "description": "Name of user",
+      "default": "",
+      "examples": [
+        "morpheus"
+      ]
+    },
+    "job": {
+      "$id": "#/properties/job",
+      "type": "string",
+      "title": "The job name",
+      "description": "User's job",
+      "default": "",
+      "examples": [
+        "leader"
+      ]
+    },
+    "id": {
+      "$id": "#/properties/id",
+      "type": "string",
+      "title": "User ID",
+      "description": "Autoincrement ID",
+      "default": "",
+      "examples": [
+        "720"
+      ]
+    },
+    "createdAt": {
+      "$id": "#/properties/createdAt",
+      "type": "string",
+      "title": "The createdAt schema",
+      "description": "Returns the date of creation",
+      "default": "",
+      "examples": [
+        "2020-11-03T18:12:32.587Z"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "data": {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"
+      },
+      "ad": {
+        "company": "StatusCode Weekly",
+        "url": "http://statuscode.org/",
+        "text": "A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things."
+      }
+    }
+  ],
+  "required": [
+    "data",
+    "ad"
+  ],
+  "properties": {
+    "data": {
+      "$id": "#/properties/data",
+      "type": "object",
+      "title": "The data schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "id": 2,
+          "email": "janet.weaver@reqres.in",
+          "first_name": "Janet",
+          "last_name": "Weaver",
+          "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"
+        }
+      ],
+      "required": [
+        "id",
+        "email",
+        "first_name",
+        "last_name",
+        "avatar"
+      ],
+      "properties": {
+        "id": {
+          "$id": "#/properties/data/properties/id",
+          "type": "integer",
+          "title": "The id schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            2
+          ]
+        },
+        "email": {
+          "$id": "#/properties/data/properties/email",
+          "type": "string",
+          "title": "The email schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "janet.weaver@reqres.in"
+          ]
+        },
+        "first_name": {
+          "$id": "#/properties/data/properties/first_name",
+          "type": "string",
+          "title": "The first_name schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Janet"
+          ]
+        },
+        "last_name": {
+          "$id": "#/properties/data/properties/last_name",
+          "type": "string",
+          "title": "The last_name schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Weaver"
+          ]
+        },
+        "avatar": {
+          "$id": "#/properties/data/properties/avatar",
+          "type": "string",
+          "title": "The avatar schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "ad": {
+      "$id": "#/properties/ad",
+      "type": "object",
+      "title": "The ad schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "company": "StatusCode Weekly",
+          "url": "http://statuscode.org/",
+          "text": "A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things."
+        }
+      ],
+      "required": [
+        "company",
+        "url",
+        "text"
+      ],
+      "properties": {
+        "company": {
+          "$id": "#/properties/ad/properties/company",
+          "type": "string",
+          "title": "The company schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "StatusCode Weekly"
+          ]
+        },
+        "url": {
+          "$id": "#/properties/ad/properties/url",
+          "type": "string",
+          "title": "The url schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "http://statuscode.org/"
+          ]
+        },
+        "text": {
+          "$id": "#/properties/ad/properties/text",
+          "type": "string",
+          "title": "The text schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "A weekly newsletter focusing on software development, infrastructure, the server, performance, and the stack end of things."
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
