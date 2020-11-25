@@ -7,37 +7,35 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class UserDataFactory {
-    public static UserDto createUser() throws IOException {
+
+    public static UserDto createDefaultUser() throws IOException {
 
         // Responsible for get JSON values and populate the object through DTO
         ObjectMapper objectMapper = new ObjectMapper();
 
         UserDto user = objectMapper.readValue(
-                new FileInputStream ("src/test/resources/RequestBody/postUser.json"),
+                new FileInputStream ("src/test/resources/requestBody/postUser.json"),
                 UserDto.class);
 
         return user;
     }
 
     public static UserDto createAValidUser () throws IOException {
-        UserDto validUser = createUser();
+        UserDto validUser = createDefaultUser();
 
         return validUser;
     }
 
     public static UserDto createAnUnnamedUser () throws IOException {
-        UserDto unnamedUser = createUser();
+        UserDto unnamedUser = createDefaultUser();
         unnamedUser.setName("");
 
         return unnamedUser;
     }
 
-    public static UserDto createAnUserToGet(){
+    public static UserDto createAnUserToGet() throws IOException {
 
-        UserDto user = new UserDto();
-
-        user.setName("Eduardo");
-        user.setJob("QA Analyst");
+        UserDto user = createDefaultUser();
 
         return user;
     }
