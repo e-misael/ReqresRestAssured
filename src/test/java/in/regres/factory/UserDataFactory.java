@@ -9,7 +9,7 @@ import java.io.IOException;
 public class UserDataFactory {
     public static UserDto createUser() throws IOException {
 
-        // Responsible for get JSON values and populate DTO
+        // Responsible for get JSON values and populate the object through DTO
         ObjectMapper objectMapper = new ObjectMapper();
 
         UserDto user = objectMapper.readValue(
