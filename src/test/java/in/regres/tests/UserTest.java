@@ -68,7 +68,7 @@ public class UserTest {
     }
 
     @Test
-    public void testShouldGetAnUniqueUser() {
+    public void testShouldGetAnUniqueUser() throws IOException {
 
         UserDto user = UserDataFactory.createAnUserToGet();
 
